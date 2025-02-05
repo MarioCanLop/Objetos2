@@ -1,4 +1,4 @@
-package org.example;
+package org.example.biblioteca;
 
 import java.util.ArrayList;
 
@@ -81,11 +81,11 @@ public class Estudiante {
     @Override
     public String toString(){
 
-        if(!librosPrestados.isEmpty()){
+      //  if(!librosPrestados.isEmpty()){
             return "Estudiante : [ nombre=" + getNombre() + " curso=" + getCurso() + " nia=" + getNia() + " email=" + getEmail() +  "]";
-        }else{
-            return "Estudiante : [ nombre=" + getNombre() + " curso=" + getCurso() + " nia=" + getNia() + " email=" + getEmail() + "]";
-        }
+     //   }else{
+      //      return "Estudiante : [ nombre=" + getNombre() + " curso=" + getCurso() + " nia=" + getNia() + " email=" + getEmail() + "]";
+       // }
 
     }
 

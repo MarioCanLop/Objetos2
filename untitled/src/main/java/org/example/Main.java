@@ -1,8 +1,10 @@
 package org.example;
 
-import java.util.Scanner;
-
-import static org.example.Estudiante.validarEmail;
+import org.example.Casa.Casa;
+import org.example.biblioteca.Editorial;
+import org.example.biblioteca.Estudiante;
+import org.example.biblioteca.Libro;
+import org.example.biblioteca.Prestamo;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -152,42 +154,81 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
 
 
-        Estudiante estudiante1 = new Estudiante("Paco");
-        Estudiante estudiante2 = new Estudiante("Paco","2ºESO","noseque@edu.gva.es");
+//        Estudiante estudiante1 = new Estudiante("Paco");
+//        Estudiante estudiante2 = new Estudiante("Paco","2ºESO","noseque@edu.gva.es");
+//
+//        System.out.println(estudiante1);
+//        System.out.println(estudiante2);
+//
+//        if(Estudiante.validarEmail(estudiante2.getEmail())){
+//            System.out.println("El email es correcto");
+//        }else{
+//            System.out.println("El email no cumple con el formato");
+//        }
+//
+//        Editorial editorial1 = new Editorial("ANAYA","ESPAÑA");
+//        System.out.println(editorial1);
+//
+//        Libro libro1 = new Libro("el principito","quevedo",editorial1);
+//        System.out.println(libro1);
+//        System.out.println(editorial1);
+//        Libro libro2 = new Libro("tiburon","torres", editorial1);
+//        System.out.println(libro2);
+//        System.out.println(editorial1);
+//
+//        System.out.println(Libro.getLibrosDisponibles());
+//        Prestamo prestamo1 = libro1.prestar(estudiante2);
+//        System.out.println(prestamo1);
+//        System.out.println(estudiante2);
+//        System.out.println(libro1);
+//        System.out.println(Libro.getLibrosDisponibles());
+//
+//        libro1.devolver(estudiante2);
+//        System.out.println(libro1);
+//        System.out.println(estudiante2);
+//        System.out.println(Libro.getLibrosDisponibles());
+//        libro1.devolver(estudiante2);
+//
+//        libro1.estaDisponible();
 
-        System.out.println(estudiante1);
-        System.out.println(estudiante2);
 
-        if(Estudiante.validarEmail(estudiante2.getEmail())){
-            System.out.println("El email es correcto");
-        }else{
-            System.out.println("El email no cumple con el formato");
-        }
 
-        Editorial editorial1 = new Editorial("ANAYA","ESPAÑA");
-        System.out.println(editorial1);
+//        Casa casa = new Casa("Calle Mayor 123");
+//
+//        casa.agregarHabitacion("Dormitorio" , 50);
+//        casa.agregarHabitacion("Cocina", 40);
+//        casa.agregarHabitacion("Baño", 25);
+//
+//        casa.mostrarHabitaciones();
+//
+//        System.out.println("La habitación mas grande es " + casa.getHabitacionMasGrande().getNombre());
+//
+//        casa.agregarHabitacion("salon", 25);
+//        casa.mostrarHabitaciones();
+//
+//        casa.eliminarHabitacion("Baño");
+//        casa.mostrarHabitaciones();
 
-        Libro libro1 = new Libro("el principito","quevedo",editorial1);
-        System.out.println(libro1);
-        System.out.println(editorial1);
-        Libro libro2 = new Libro("tiburon","torres", editorial1);
-        System.out.println(libro2);
-        System.out.println(editorial1);
+            //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+            // to see how IntelliJ IDEA suggests fixing it.
+            Casa casa = new Casa("Calle Mayor 123");
 
-        System.out.println(Libro.getLibrosDisponibles());
-        Prestamo prestamo1 = libro1.prestar(estudiante2);
-        System.out.println(prestamo1);
-        System.out.println(estudiante2);
-        System.out.println(libro1);
-        System.out.println(Libro.getLibrosDisponibles());
+            casa.agregarHabitacion("Dormitorio",40);
+            casa.agregarHabitacion("Cocina",50);
+            casa.agregarHabitacion("Baño",70);
 
-        libro1.devolver(estudiante2);
-        System.out.println(libro1);
-        System.out.println(estudiante2);
-        System.out.println(Libro.getLibrosDisponibles());
-        libro1.devolver(estudiante2);
+            casa.mostrarHabitaciones();
 
-        libro1.estaDisponible();
+            System.out.println("La habitación más grande es " + casa.getHabitacionMasGrande());
+
+            casa.borrarHabitacion("Baño");
+            casa.borrarHabitacion("Baño");
+
+            casa.getHabitaciones().get(0).agregarElectrodomestico("tv",23);
+            casa.getHabitaciones().get(1).agregarElectrodomestico("tv",30);
+            System.out.println(casa.getHabitaciones());
+
+            casa.calcularHabitacionMasConsumo();
 
 
 
